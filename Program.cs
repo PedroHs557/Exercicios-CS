@@ -26,23 +26,34 @@
 
 //* Exercício 3
 
-Console.Write("Digite a nota do aluno: ");
-double nota = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Digite a nota do aluno: ");
+// double nota = Convert.ToDouble(Console.ReadLine());
 
-if (10 >= nota && nota >= 7)
-{
-    Console.WriteLine("Aprovado");
-}
-else if (7 > nota && nota >= 5)
-{
-    Console.WriteLine("Recuperação");
-}
-else if (nota < 5)
-{
-    Console.WriteLine("Reprovado");
-}
+// if (10 >= nota && nota >= 7)
+// {
+//     Console.WriteLine("Aprovado");
+// }
+// else if (7 > nota && nota >= 5)
+// {
+//     Console.WriteLine("Recuperação");
+// }
+// else if (nota < 5)
+// {
+//     Console.WriteLine("Reprovado");
+// }
 
-else
+// else
+// {
+//     Console.WriteLine("Nota inválida");
+// }
+
+//* Exercício 4
+
+Console.Write("Digite o número: ");
+decimal numero = Convert.ToDecimal(Console.ReadLine());
+
+for (int i = 1; i <= 10; i++)
 {
-    Console.WriteLine("Nota inválida");
+    decimal resultado = numero * i;
+    Console.WriteLine($"{numero} x {i} = {resultado}");
 }
