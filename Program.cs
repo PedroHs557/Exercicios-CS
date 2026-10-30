@@ -60,32 +60,69 @@
 
 //* Exercício 5
 
-    Random rnd = new Random();
-    int NA = rnd.Next(1, 11);
+    // Random rnd = new Random();
+    // int NA = rnd.Next(1, 11);
     
-    Console.Write("Digite um número entre 1 e 10: ");
-    int numero = Convert.ToInt32(Console.ReadLine());
+    // Console.Write("Digite um número entre 1 e 10: ");
+    // int numero = Convert.ToInt32(Console.ReadLine());
 
-    while (numero != NA)
+    // while (numero != NA)
+    // {
+    //     if (numero < 1 || numero > 10)
+    //     {
+    //         Console.WriteLine("Número inválido. Digite um número entre 1 e 10.");
+    //     }
+    //     else if (numero > NA)
+    //     {
+    //         Console.WriteLine("O número é menor.");
+    //     }
+    //     else if (numero < NA)
+    //     {
+    //         Console.WriteLine("O número é maior.");
+    //     }
+
+    //     Console.Write("Digite outro número entre 1 e 10: ");
+    //     numero = Convert.ToInt32(Console.ReadLine());
+
+    //     if (numero == NA)
+    //     {
+    //         Console.WriteLine("Parabéns! Você acertou o número.");
+    //     }
+    // }    
+
+    //* Exercício 6
+
+    Console.Write("Digite o primeiro número: ");
+    int num1 = int.Parse(Console.ReadLine()!);
+
+    Console.Write("Digite o segundo número: ");
+    int num2 = int.Parse(Console.ReadLine()!);
+
+    Console.WriteLine("""
+    Selecione um dos métodos abaixo:
+    1 - Somar
+    2 - Multiplicar
+    """);
+
+    Console.Write("Digite uma opção: ");
+    int opcao = int.Parse(Console.ReadLine()!);
+
+    switch (opcao)
     {
-        if (numero < 1 || numero > 10)
-        {
-            Console.WriteLine("Número inválido. Digite um número entre 1 e 10.");
-        }
-        else if (numero > NA)
-        {
-            Console.WriteLine("O número é menor.");
-        }
-        else if (numero < NA)
-        {
-            Console.WriteLine("O número é maior.");
-        }
+      case 1:
+        Console.WriteLine("Opção Somar foi selecionada");
+        Console.WriteLine("Resultado: " + (num1 + num2));
+        break;
+      case 2:
+        Console.WriteLine("Opção Multiplicar foi selecionada");
+        Console.WriteLine("Resultado: " + (num1 * num2));
+        break;
 
-        Console.Write("Digite outro número entre 1 e 10: ");
-        numero = Convert.ToInt32(Console.ReadLine());
-
-        if (numero == NA)
-        {
-            Console.WriteLine("Parabéns! Você acertou o número.");
-        }
+      default:
+        Console.WriteLine("Opção inválida");
+        break;
     }
+
+    
+    
+    
