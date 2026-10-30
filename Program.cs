@@ -49,11 +49,43 @@
 
 //* Exercício 4
 
-Console.Write("Digite o número: ");
-decimal numero = Convert.ToDecimal(Console.ReadLine());
+// Console.Write("Digite o número: ");
+// decimal numero = Convert.ToDecimal(Console.ReadLine());
 
-for (int i = 1; i <= 10; i++)
-{
-    decimal resultado = numero * i;
-    Console.WriteLine($"{numero} x {i} = {resultado}");
-}
+// for (int i = 1; i <= 10; i++)
+// {
+//     decimal resultado = numero * i;
+//     Console.WriteLine($"{numero} x {i} = {resultado}");
+// }
+
+//* Exercício 5
+
+    Random rnd = new Random();
+    int NA = rnd.Next(1, 11);
+    
+    Console.Write("Digite um número entre 1 e 10: ");
+    int numero = Convert.ToInt32(Console.ReadLine());
+
+    while (numero != NA)
+    {
+        if (numero < 1 || numero > 10)
+        {
+            Console.WriteLine("Número inválido. Digite um número entre 1 e 10.");
+        }
+        else if (numero > NA)
+        {
+            Console.WriteLine("O número é menor.");
+        }
+        else if (numero < NA)
+        {
+            Console.WriteLine("O número é maior.");
+        }
+
+        Console.Write("Digite outro número entre 1 e 10: ");
+        numero = Convert.ToInt32(Console.ReadLine());
+
+        if (numero == NA)
+        {
+            Console.WriteLine("Parabéns! Você acertou o número.");
+        }
+    }
